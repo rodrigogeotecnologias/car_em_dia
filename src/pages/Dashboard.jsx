@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { MapContainer, TileLayer, Polygon, Polyline, LayersControl } from 'react-leaflet';
-import { Download, AlertCircle, CheckCircle, Info, MessageSquare, X, Send, Leaf, CheckSquare, XCircle, Map, FileDown, FileText, Receipt, Eye, EyeOff } from 'lucide-react';
+import { Download, AlertCircle, CheckCircle, Info, MessageSquare, X, Send, Leaf, CheckSquare, XCircle, Map, FileDown, FileText, Receipt, Eye, EyeOff, ChevronRight } from 'lucide-react';
 import { mockProperty } from '../mockData/propertyData';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
@@ -313,15 +313,20 @@ const Dashboard = () => {
               }}
               onClick={() => setSelectedPendency(pendencia)}
             >
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                {renderStatusIcon(pendencia.status, 64)}
-                <div>
-                  <h4 style={{ margin: 0, fontSize: '1rem' }}>{pendencia.tipo}</h4>
-                  <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', marginTop: '0.25rem', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                    {pendencia.explicacaoSimples}
-                  </p>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flex: 1 }}>
+                    {renderStatusIcon(pendencia.status, 64)}
+                    <div>
+                      <h4 style={{ margin: 0, fontSize: '1rem' }}>{pendencia.tipo}</h4>
+                      <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', marginTop: '0.25rem', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                        {pendencia.explicacaoSimples}
+                      </p>
+                      <div style={{ marginTop: '0.75rem', color: 'var(--primary)', fontSize: '0.85rem', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                        Clique para traduzir a pendência <ChevronRight size={16} />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
             </div>
           ))}
         </div>
