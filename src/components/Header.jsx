@@ -58,7 +58,7 @@ const Header = () => {
               </div>
               <div style={{ backgroundColor: 'white', padding: '1rem', borderRadius: '0 15px 15px 15px', maxWidth: '90%', alignSelf: 'flex-start', boxShadow: '0 1px 2px rgba(0,0,0,0.1)' }}>
                 <p style={{ margin: '0 0 0.5rem 0' }}>Olá, Seu Raimundo! 👋</p>
-                <p style={{ margin: '0 0 0.5rem 0' }}>A nossa **Análise Dinamizada** concluiu a verificação do CAR da sua fazenda (*Ipê Amarelo*).</p>
+                <p style={{ margin: '0 0 0.5rem 0' }}>A nossa **Análise Dinamizada** concluiu a verificação do CAR da sua fazenda (*Fazenda haCARthon*).</p>
                 <p style={{ margin: '0 0 0.5rem 0' }}>⚠️ Identificamos uma pendência na sua Área de Preservação Permanente (APP).</p>
                 <p style={{ margin: 0, fontWeight: 'bold' }}>Mas não se preocupe! Acesse nosso Tradutor Ambiental e veja como é simples resolver isso clicando no link abaixo:</p>
                 <a href="#" onClick={(e) => { e.preventDefault(); setWhatsappOpen(false); navigate('/tradutor/pendencias'); }} style={{ display: 'block', marginTop: '0.5rem', wordBreak: 'break-all', color: '#3498db' }}>https://car-facil.gov.br/tradutor/pendencias</a>

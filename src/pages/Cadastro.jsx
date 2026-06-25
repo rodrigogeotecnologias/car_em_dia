@@ -63,7 +63,7 @@ const Cadastro = () => {
             
             <div className="form-group">
               <label className="form-label">Nome da Propriedade</label>
-              <input type="text" className="form-control" placeholder="Ex: Fazenda Ipê Amarelo" />
+              <input type="text" className="form-control" placeholder="Ex: Fazenda haCARthon" />
             </div>
             <div className="form-group">
               <label className="form-label">Município e Estado</label>
@@ -143,7 +143,7 @@ const Cadastro = () => {
             <div style={{ padding: '1rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)', marginBottom: '2rem' }}>
               <h4 style={{ marginBottom: '0.5rem' }}>Resumo</h4>
               <ul style={{ listStyle: 'none', padding: 0 }}>
-                <li style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--border)' }}><strong>Propriedade:</strong> Fazenda Ipê Amarelo</li>
+                <li style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--border)' }}><strong>Propriedade:</strong> Fazenda haCARthon</li>
                 <li style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--border)' }}><strong>Local:</strong> Brazlândia - DF</li>
                 <li style={{ padding: '0.5rem 0' }}><strong>Arquivo de Mapa:</strong> {file?.name || 'mapa.kml'}</li>
               </ul>

@@ -45,7 +45,7 @@ const Consulta = () => {
 
           <div className="form-group">
             <label className="form-label">Nome da Propriedade</label>
-            <input type="text" className="form-control" placeholder="Ex: Fazenda Ipê Amarelo" required defaultValue="Fazenda Ipê Amarelo" />
+            <input type="text" className="form-control" placeholder="Ex: Fazenda haCARthon" required defaultValue="Fazenda haCARthon" />
           </div>
 
           <div className="form-group">
