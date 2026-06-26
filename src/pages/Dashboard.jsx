@@ -102,12 +102,12 @@ const Dashboard = () => {
         <div className="no-print" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
           <div style={{ textAlign: 'right' }}>
             <span style={{ fontSize: '0.875rem', color: 'var(--text-muted)' }}>Índice de Regularidade</span>
-            <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--success)' }}>
+            <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--warning)' }}>
               {mockProperty.indiceRegularidade}<span style={{ fontSize: '1rem' }}>/100</span>
             </div>
-            <div style={{ fontSize: '0.875rem', color: 'var(--success)', display: 'flex', alignItems: 'center', gap: '0.25rem', justifyContent: 'flex-end' }}>
-              <span style={{ display: 'inline-block', width: '10px', height: '10px', borderRadius: '50%', backgroundColor: 'var(--success)' }}></span>
-              Boa condição para análise
+            <div style={{ fontSize: '0.875rem', color: 'var(--warning)', display: 'flex', alignItems: 'center', gap: '0.25rem', justifyContent: 'flex-end' }}>
+              <span style={{ display: 'inline-block', width: '10px', height: '10px', borderRadius: '50%', backgroundColor: 'var(--warning)' }}></span>
+              Atenção necessária
             </div>
           </div>
 

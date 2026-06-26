@@ -4,7 +4,7 @@ export const mockProperty = {
   areaTotal: 83.00,
   carId: 'GO-1234567-89ABCDEF0123456789ABCDEF',
   status: 'Pendente',
-  indiceRegularidade: 85,
+  indiceRegularidade: 65,
   center: [-15.6500, -48.1500],
   proprietario: {
     nome: 'Seu Raimundo',
