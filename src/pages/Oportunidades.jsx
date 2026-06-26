@@ -72,68 +72,74 @@ const Oportunidades = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           
           {/* Card 1: Crédito Rural (Pronaf) */}
-          <div className="card" style={{ position: 'relative', overflow: 'hidden', opacity: isRegular ? 1 : 0.7, transition: '0.3s' }}>
-            {!isRegular && (
-              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(255,255,255,0.8)', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(2px)' }}>
-                <Lock size={48} color="var(--text-muted)" style={{ marginBottom: '0.5rem' }} />
-                <strong style={{ color: 'var(--text-muted)' }}>Desbloqueie ao atingir 100 pontos</strong>
+          <div className="card" style={{ position: 'relative', overflow: 'hidden', opacity: isRegular ? 1 : 0.8, transition: '0.3s', border: isRegular ? 'none' : '1px solid #ddd', backgroundColor: isRegular ? 'white' : '#fcfcfc' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', justifyContent: 'space-between' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', flex: 1 }}>
+                <div style={{ backgroundColor: isRegular ? 'rgba(52, 152, 219, 0.1)' : '#eee', padding: '1rem', borderRadius: '50%' }}>
+                  <DollarSign size={32} color={isRegular ? "#3498db" : "#999"} />
+                </div>
+                <div>
+                  <h3 style={{ margin: '0 0 0.5rem 0', color: isRegular ? 'inherit' : '#777' }}>Crédito Rural (PRONAF)</h3>
+                  <p style={{ color: 'var(--text-muted)', margin: 0 }}>
+                    Tenha acesso a linhas de financiamento com as menores taxas de juros do mercado para investir em maquinário e custeio.
+                  </p>
+                  {isRegular && <button className="btn btn-primary" style={{ marginTop: '1rem' }}>Solicitar Linha de Crédito</button>}
+                </div>
               </div>
-            )}
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-              <div style={{ backgroundColor: 'rgba(52, 152, 219, 0.1)', padding: '1rem', borderRadius: '50%' }}>
-                <DollarSign size={32} color="#3498db" />
-              </div>
-              <div>
-                <h3 style={{ margin: '0 0 0.5rem 0' }}>Crédito Rural (PRONAF)</h3>
-                <p style={{ color: 'var(--text-muted)', margin: 0 }}>
-                  Tenha acesso a linhas de financiamento com as menores taxas de juros do mercado para investir em maquinário e custeio.
-                </p>
-                {isRegular && <button className="btn btn-primary" style={{ marginTop: '1rem' }}>Solicitar Linha de Crédito</button>}
-              </div>
+              {!isRegular && (
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '130px', paddingLeft: '1rem', borderLeft: '1px dashed #ccc' }}>
+                  <Lock size={32} color="#999" style={{ marginBottom: '0.5rem' }} />
+                  <strong style={{ color: '#999', fontSize: '0.8rem', textAlign: 'center' }}>Desbloqueie ao<br/>atingir 100 pontos</strong>
+                </div>
+              )}
             </div>
           </div>
 
           {/* Card 2: Cotas de Reserva Ambiental (CRA) */}
-          <div className="card" style={{ position: 'relative', overflow: 'hidden', opacity: isRegular ? 1 : 0.7, transition: '0.3s' }}>
-            {!isRegular && (
-              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(255,255,255,0.8)', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(2px)' }}>
-                <Lock size={48} color="var(--text-muted)" style={{ marginBottom: '0.5rem' }} />
-                <strong style={{ color: 'var(--text-muted)' }}>Desbloqueie ao atingir 100 pontos</strong>
+          <div className="card" style={{ position: 'relative', overflow: 'hidden', opacity: isRegular ? 1 : 0.8, transition: '0.3s', border: isRegular ? 'none' : '1px solid #ddd', backgroundColor: isRegular ? 'white' : '#fcfcfc' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', justifyContent: 'space-between' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', flex: 1 }}>
+                <div style={{ backgroundColor: isRegular ? 'rgba(46, 204, 113, 0.1)' : '#eee', padding: '1rem', borderRadius: '50%' }}>
+                  <Sprout size={32} color={isRegular ? "var(--success)" : "#999"} />
+                </div>
+                <div>
+                  <h3 style={{ margin: '0 0 0.5rem 0', color: isRegular ? 'inherit' : '#777' }}>Venda de Cotas (CRA)</h3>
+                  <p style={{ color: 'var(--text-muted)', margin: 0 }}>
+                    Você tem excedente de floresta nativa? Venda Cotas de Reserva Ambiental (CRA) para outros produtores e gere renda extra sem precisar plantar.
+                  </p>
+                  {isRegular && <button className="btn btn-primary" style={{ marginTop: '1rem', backgroundColor: 'var(--success)' }}>Simular Ganhos com CRA</button>}
+                </div>
               </div>
-            )}
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-              <div style={{ backgroundColor: 'rgba(46, 204, 113, 0.1)', padding: '1rem', borderRadius: '50%' }}>
-                <Sprout size={32} color="var(--success)" />
-              </div>
-              <div>
-                <h3 style={{ margin: '0 0 0.5rem 0' }}>Venda de Cotas (CRA)</h3>
-                <p style={{ color: 'var(--text-muted)', margin: 0 }}>
-                  Você tem excedente de floresta nativa? Venda Cotas de Reserva Ambiental (CRA) para outros produtores e gere renda extra sem precisar plantar.
-                </p>
-                {isRegular && <button className="btn btn-primary" style={{ marginTop: '1rem', backgroundColor: 'var(--success)' }}>Simular Ganhos com CRA</button>}
-              </div>
+              {!isRegular && (
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '130px', paddingLeft: '1rem', borderLeft: '1px dashed #ccc' }}>
+                  <Lock size={32} color="#999" style={{ marginBottom: '0.5rem' }} />
+                  <strong style={{ color: '#999', fontSize: '0.8rem', textAlign: 'center' }}>Desbloqueie ao<br/>atingir 100 pontos</strong>
+                </div>
+              )}
             </div>
           </div>
 
           {/* Card 3: Pagamento por Serviços Ambientais (PSA) */}
-          <div className="card" style={{ position: 'relative', overflow: 'hidden', opacity: isRegular ? 1 : 0.7, transition: '0.3s' }}>
-            {!isRegular && (
-              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(255,255,255,0.8)', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(2px)' }}>
-                <Lock size={48} color="var(--text-muted)" style={{ marginBottom: '0.5rem' }} />
-                <strong style={{ color: 'var(--text-muted)' }}>Desbloqueie ao atingir 100 pontos</strong>
+          <div className="card" style={{ position: 'relative', overflow: 'hidden', opacity: isRegular ? 1 : 0.8, transition: '0.3s', border: isRegular ? 'none' : '1px solid #ddd', backgroundColor: isRegular ? 'white' : '#fcfcfc' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', justifyContent: 'space-between' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', flex: 1 }}>
+                <div style={{ backgroundColor: isRegular ? 'rgba(155, 89, 182, 0.1)' : '#eee', padding: '1rem', borderRadius: '50%' }}>
+                  <Unlock size={32} color={isRegular ? "#9b59b6" : "#999"} />
+                </div>
+                <div>
+                  <h3 style={{ margin: '0 0 0.5rem 0', color: isRegular ? 'inherit' : '#777' }}>Pagamento por Serviços Ambientais</h3>
+                  <p style={{ color: 'var(--text-muted)', margin: 0 }}>
+                    Receba dinheiro do governo ou de ONGs por proteger nascentes e conservar a biodiversidade da sua propriedade.
+                  </p>
+                  {isRegular && <button className="btn btn-primary" style={{ marginTop: '1rem', backgroundColor: '#9b59b6' }}>Inscrever no Edital</button>}
+                </div>
               </div>
-            )}
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-              <div style={{ backgroundColor: 'rgba(155, 89, 182, 0.1)', padding: '1rem', borderRadius: '50%' }}>
-                <Unlock size={32} color="#9b59b6" />
-              </div>
-              <div>
-                <h3 style={{ margin: '0 0 0.5rem 0' }}>Pagamento por Serviços Ambientais</h3>
-                <p style={{ color: 'var(--text-muted)', margin: 0 }}>
-                  Receba dinheiro do governo ou de ONGs por proteger nascentes e conservar a biodiversidade da sua propriedade.
-                </p>
-                {isRegular && <button className="btn btn-primary" style={{ marginTop: '1rem', backgroundColor: '#9b59b6' }}>Inscrever no Edital</button>}
-              </div>
+              {!isRegular && (
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '130px', paddingLeft: '1rem', borderLeft: '1px dashed #ccc' }}>
+                  <Lock size={32} color="#999" style={{ marginBottom: '0.5rem' }} />
+                  <strong style={{ color: '#999', fontSize: '0.8rem', textAlign: 'center' }}>Desbloqueie ao<br/>atingir 100 pontos</strong>
+                </div>
+              )}
             </div>
           </div>
 

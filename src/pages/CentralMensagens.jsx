@@ -113,7 +113,7 @@ const CentralMensagens = () => {
                 <Leaf size={24} />
               </div>
               <div>
-                <strong style={{ display: 'block', fontSize: '1.1rem' }}>Governo - CAR Fácil</strong>
+                <strong style={{ display: 'block', fontSize: '1.1rem' }}>Governo - CAR em Dia</strong>
                 <span style={{ fontSize: '0.8rem', opacity: 0.8 }}>online</span>
               </div>
             </div>
@@ -139,7 +139,7 @@ const CentralMensagens = () => {
                 
                 <div style={{ backgroundColor: '#f0f0f0', borderRadius: '8px', padding: '10px', marginTop: '10px', borderLeft: '4px solid #128242' }}>
                   <span style={{ fontSize: '0.8rem', fontWeight: 'bold', color: '#128242', display: 'block' }}>Central do Proprietário - Tradutor Ambiental</span>
-                  <Link to="/tradutor/pendencias" style={{ fontSize: '0.85rem', color: '#3498db', textDecoration: 'none', wordBreak: 'break-all' }}>https://car-facil.gov.br/tradutor/pendencias</Link>
+                  <Link to="/tradutor/pendencias" style={{ fontSize: '0.85rem', color: '#3498db', textDecoration: 'none', wordBreak: 'break-all' }}>https://car-em-dia.gov.br/tradutor/pendencias</Link>
                 </div>
                 
                 <div style={{ fontSize: '0.7rem', color: '#999', textAlign: 'right', marginTop: '0.5rem', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '4px' }}>
@@ -154,7 +154,7 @@ const CentralMensagens = () => {
                 
                 <div style={{ backgroundColor: '#f0f0f0', borderRadius: '8px', padding: '10px', marginTop: '10px', borderLeft: '4px solid #128242' }}>
                   <span style={{ fontSize: '0.8rem', fontWeight: 'bold', color: '#128242', display: 'block' }}>Central do Proprietário - Regularização (PRA)</span>
-                  <Link to="/tradutor/regularizacao" style={{ fontSize: '0.85rem', color: '#3498db', textDecoration: 'none', wordBreak: 'break-all' }}>https://car-facil.gov.br/tradutor/regularizacao</Link>
+                  <Link to="/tradutor/regularizacao" style={{ fontSize: '0.85rem', color: '#3498db', textDecoration: 'none', wordBreak: 'break-all' }}>https://car-em-dia.gov.br/tradutor/regularizacao</Link>
                 </div>
                 
                 <div style={{ fontSize: '0.7rem', color: '#999', textAlign: 'right', marginTop: '0.5rem', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '4px' }}>

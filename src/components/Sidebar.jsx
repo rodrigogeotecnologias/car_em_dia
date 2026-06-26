@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Home, Mail, FileText, CheckSquare, Users, Leaf, X, Send, Wand2, ArrowRightLeft } from 'lucide-react'
-import logoCar from '../assets/logo_car.png'
+import logoCarEmDia from '../assets/logo_car_em_dia_fixed.png'
 
 const Sidebar = () => {
   const location = useLocation();
@@ -12,8 +12,8 @@ const Sidebar = () => {
 
   return (
     <div className="sicar-sidebar">
-      <div className="sicar-sidebar-header" style={{ display: 'flex', justifyContent: 'center' }}>
-        <img src={logoCar} alt="SICAR" style={{ maxHeight: '55px', width: 'auto', mixBlendMode: 'multiply' }} />
+      <div className="sicar-sidebar-header" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0 10px' }}>
+        <img src={logoCarEmDia} alt="CAR em Dia" style={{ height: '55px', maxWidth: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
       </div>
       
       <div className="sicar-sidebar-menu">
