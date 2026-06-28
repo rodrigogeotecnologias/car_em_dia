@@ -34,9 +34,9 @@ const DemoAutoPilot = () => {
   };
 
   const runDemo = async () => {
-    // Abre a janela do teleprompter tentando forçar a posição na segunda tela (à direita da tela principal)
-    const leftPos = window.screen.width;
-    window.open('/teleprompter', 'Teleprompter', `width=1000,height=800,left=${leftPos},top=0,toolbar=no,scrollbars=yes`);
+    // Para envio aos jurados, o Teleprompter foi desativado para não abrir pop-ups confusos
+    // const leftPos = window.screen.width;
+    // window.open('/teleprompter', 'Teleprompter', `width=1000,height=800,left=${leftPos},top=0,toolbar=no,scrollbars=yes`);
 
     setIsPlaying(true);
     localStorage.setItem('demo_start', Date.now().toString());
