@@ -166,25 +166,25 @@ const DemoAutoPilot = () => {
       localStorage.setItem('demo_scene', '1-' + Date.now());
       navigate('/oportunidades');
       setCursorPos({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
-      await sleep(4000); // aumentado para 4s
+      await sleep(2000); // -1.5s
       
       // Mostra a nota 80 e as oportunidades bloqueadas
       await naturalScroll(400, 2000);
-      await sleep(2500); // aumentado para 2.5s
+      await sleep(1000); // -1.0s
       await naturalScroll(-window.scrollY, 1500);
-      await sleep(2000); // aumentado para 2s
+      await sleep(1000); // -0.5s
       
       // Abre a aba "Como funciona a pontuação?"
       await goToAndClick('button', 'como funciona a pontuação');
-      await sleep(2500); // aumentado para 2.5s
+      await sleep(2000); // reduzido 0.5s
       await naturalScroll(450, 3500); // Rola devagar para ler as regras
-      await sleep(4500); // aumentado para 4.5s
+      await sleep(4500);
       
       // -- CENA 2: MENSAGENS (WHATSAPP) --
       // Volta pro topo e navega pro menu de mensagens
       await naturalScroll(-window.scrollY, 1500);
       await goToAndClick('a', 'mensagens', '/mensagens');
-      await sleep(2000);
+      await sleep(1500); // -0.5s
       localStorage.setItem('demo_scene', '2-' + Date.now()); // Vira a cena APÓS carregar a tela de mensagens
       
       const selectEl = document.querySelector('select');
@@ -201,11 +201,11 @@ const DemoAutoPilot = () => {
         await sleep(300);
         nativeSelectValueSetter.call(selectEl, 'sms');
         selectEl.dispatchEvent(new Event('change', { bubbles: true }));
-        await sleep(1000);
+        await sleep(500); // -0.5s
         
         // 2. Agora que o celular apareceu, rola a tela para focar nele inteiro
         await naturalScroll(450, 2000);
-        await sleep(1000);
+        await sleep(500); // -0.5s
         
         // 3. Reposiciona o mouse no seletor (que subiu na tela devido ao scroll)
         const updatedSelectRect = selectEl.getBoundingClientRect();
@@ -229,7 +229,7 @@ const DemoAutoPilot = () => {
 
       // Scroll super cuidadoso apenas DENTRO do celular para ler a notificação
       await naturalScrollElement('chat-container', 300, 3000);
-      await sleep(2000);
+      await sleep(1500); // -0.5s
 
       await goToAndClick('a', 'analise', '/analise');
       
@@ -238,7 +238,7 @@ const DemoAutoPilot = () => {
       await sleep(1500);
       // Rola a página revelando a tela complexa e encontrando o banner amarelo
       await naturalScroll(400, 1500);
-      await sleep(2500); // Tempo enxuto para o narrador
+      await sleep(4500); // Tempo aumentado (+2s) para a leitura do narrador
       await goToAndClick('button', 'acessar tradutor ambiental', '/tradutor/pendencias');
       
       // -- CENA 4: TELA TRADUTOR --

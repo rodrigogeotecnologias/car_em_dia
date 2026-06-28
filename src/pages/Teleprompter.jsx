@@ -5,19 +5,19 @@ const scriptScenes = [
     id: 1, 
     title: "Cena 1: Oportunidades",
     text: "No Brasil, ter pendência no CAR é deixar dinheiro na mesa! Produtores perdem acesso a crédito verde e Pagamentos por Serviços Ambientais (PSA) por não entenderem a burocracia. Por isso, criamos o CAR em Dia, para rodar nativamente dentro da Central do Proprietário/Possuidor. Nós gamificamos regras complexas para o produtor entender o que falta para a Nota 100.", 
-    duration: 23000 
+    duration: 18000 
   },
   { 
     id: 2, 
     title: "Cena 2: Multi-Canal",
     text: "E a nossa jornada começa onde o produtor está! O Governo envia a notificação pelo canal de preferência: SMS, Telegram ou WhatsApp. A mensagem já vem com link de acesso imediato, sem logins difíceis.", 
-    duration: 23000 
+    duration: 21000 
   },
   { 
     id: 3, 
     title: "Cena 3: A Realidade",
     text: "Ao clicar, ele cai na tela de análise. Aquele monte de termo técnico assusta. Mas adicionamos o botão 'Tradutor Ambiental', que descomplica esse documento oficial na hora!", 
-    duration: 10000 
+    duration: 12000 
   },
   { 
     id: 4, 
