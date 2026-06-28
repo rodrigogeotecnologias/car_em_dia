@@ -88,8 +88,8 @@ const Teleprompter = () => {
         <div 
           key={currentSceneIndex} 
           style={{ 
-            fontSize: '2.4rem', 
-            lineHeight: '1.5', 
+            fontSize: 'clamp(1.5rem, 4.5vh, 2.8rem)', // Ajuste dinâmico baseado na altura da tela (vh)
+            lineHeight: '1.4', 
             fontWeight: 'bold',
             color: 'white',
             textAlign: 'left',
